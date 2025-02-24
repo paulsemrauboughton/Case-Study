@@ -14,7 +14,7 @@ This repository implements a movie data ETL (Extract, Transform, Load) process t
 │   │   └── title.basics.tsv.gz          # **NOT INCLUDED DUE TO SIZE** IMDb database of movies.
 │   └── processed
 │       ├── movies_master.xlsx           # Cumulative master dataset appended by operationalise.py
-│       └── movies_analysis.csv          # Enriched movie data produced by analysis.py
+│       └── movies_analysis.csv          # Cleaned movie data produced by analysis.py
 └── src
     ├── analysis.py                      # Enriches movie data using the OMDB API and Google Trends
     ├── operationalise.py                # Updates and appends new movie data to the master file
