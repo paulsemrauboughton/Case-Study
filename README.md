@@ -38,7 +38,7 @@ This repository implements a movie data ETL (Extract, Transform, Load) process t
 - API key not included.
 - pytrends API is very unstable, cookie catching is used to mitigate some of the problems. Google often blocks requests with error 429, as thinks user is a bot.
 - In pytrends google interest search, interest is relative to film therefore "Feature film" is used as anchor term to compare movie interest with, in order to be able to compare movie interest.
-- movies_master.xlsx is not appended with all 
+- movies_master.xlsx is not appended with all form movies_gather.xlsx due to instability of pytrend.
 
   
 
