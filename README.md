@@ -28,7 +28,7 @@ This repository implements a movie data ETL (Extract, Transform, Load) process t
   Reads the provided movie list from "movies.xlsx", gathers each entry with details from the OMDB API and normalised Google Trends search data using pytrends, and saves the resulting dataset as "movies_analysis.csv" in the "data/processed" folder.
 
 - **movie_gather.py:**  
-  Uses IMDb database to gather 295,822 movies, movies must be within timeframe of 2006 < release < (current year).
+  Uses pandas to read IMDb database downloaded as "title.basics.tsv.gz", to gather 295,822 movies, movies must be within timeframe of 2006 < release < (current year).
 
 - **operationalise.py:**  
   Appends movie data generated in movie_gather.py to "movies_master.xlsx" (stored in the "data/processed" folder), building a cumulative dataset over time, for more comprehensive modelling.
