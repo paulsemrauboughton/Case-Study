@@ -9,7 +9,7 @@ database_file = (current_dir / '..' / 'data' / 'raw' / 'title.basics.tsv.gz').re
 chunk_size = 10000  # increase chunk size if memory allows
 film_list = []      # list to store filtered film titles
 
-# only read the columns needed for memory efficiency
+#only read the columns needed for memory efficiency
 usecols = ['titleType', 'primaryTitle', 'startYear']
 
 chunks = pd.read_csv(
@@ -19,13 +19,13 @@ chunks = pd.read_csv(
     chunksize=chunk_size, 
     usecols=usecols, 
     low_memory=False,
-    dtype={'titleType': 'category', 'primaryTitle': 'string', 'startYear': 'string'}  # Read startYear as string for conversion later
+    dtype={'titleType': 'category', 'primaryTitle': 'string', 'startYear': 'string'}  #read startYear as string for conversion later
 )
 
 year_int = time.localtime().tm_year
 
 for chunk in chunks:
-    #convert startYear to numeric; invalid parsing will be set as NaN
+    #convert startYear to numeric, to n/a if not to not raise error.
     chunk['startYear'] = pd.to_numeric(chunk['startYear'], errors='coerce')
     
     #filter for movies with startYear > 2006 and also less than last_year_int
