@@ -7,6 +7,7 @@ This repository implements a movie data ETL (Extract, Transform, Load) process t
 ```
 /
 ├── README.md
+├── presentation.pdf                     # Slides running through implementation and use cases of pipeline.
 ├── data
 │   ├── raw
 │   │   ├── movies.xlsx                  # Movies provided in case study
