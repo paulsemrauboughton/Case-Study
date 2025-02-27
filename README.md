@@ -1,4 +1,4 @@
-# CASE STUDY - Movie Data Pipeline
+# ETL - Movie Data Pipeline
 
 This repository implements a movie data ETL (Extract, Transform, Load) process that uses IMDb database, OMDB API, and Google Trends—to gather movie data. The goal is to build and maintain a cumulative master dataset of movies for further analysis and business insights.
 
